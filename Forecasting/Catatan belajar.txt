@@ -1,0 +1,48 @@
+FORECASTING.....
+=========================
+Forecasting adalah memperkirakan value di masa depan berdasarkan data histoy...
+
+Perkiraan ini itu ga selalu tepat, makanya forecaster yang hebat itu bukan yang selalu tepat, tapi yang tau seberapa besar kemungkinan melesetnya.
+
+Bedanya forecasting & prediksi:
+Forecasting bersifat time series (waktu), prediksi bersifat generan. Forecast bagian dari prediksi.
+
+Contoh fungsi forecast:
+ - Prediksi stok inventory = Salah nyetok uang hangus, barang ga kejual
+ - Perencanaan kapasitas SDM = Memperkirakan telepon masuk untuk menentukan agen yang jaga shift call center. Kurir, server, atau bahkan kasir.
+ - dll.
+
+=================================================
+Konsep dasar time series....
+
+Intinya data time series diurutkan berdasarkan Waktu: hari ke hari, bulan ke bulan, tahun ke tahun, jam ke jam.
+
+Time series memiliki 4 unsur:
+ - Trend = pergerakan jangka Panjang: naik, turun, datar. Contoh: penggunakan AI yang makin naik
+ - Seasonality (musiman) = Pola berulang dalam Waktu tetap dan bisa diprediksi: penjualan payung yang naik di musim hujan, dll.
+ - Cylical (siklus) = Mirip seasonality tapi periodenya tidak tetap
+ - Noise/residual (acak) = fluktiasi random yang bukan bagian dari ketiga di atas
+
+Istilah tambahan = 
+ - Stationary = grafik yang level & variasinya (fluktuasinya) hampir sama sepanjang Waktu.
+ - non-stationary = baik level atau variasinya tidak stabil.
+ - level = rata-rata atau garis tengah dari fluktuasi grafik
+
+==================================================
+Cara kerja Forecasting:
+
+Data asli biasnya mengandung trend, seasonality, cylical, dan noise/residual. Kita harus memisahkan dan 
+mengetahui komposisi kandungan data kita. 
+
+Proses pemisahan ini Namanya 'decomposition' / dekomposisi.
+
+Ini akan berpengaruh dalam pemilihan model forecasting:
+
+ - Datanya hanya ada trend: Model sederhana (moving average / regresi linear) sudah cukup. 
+ - Datanya ada trend + seasonality: butuh metode lebih canggih (SARIMA atau Holt-Winters)
+ - Datanya banyak noise: Susah di forecast
+
+===================================================
+Cara mengukur akurasi forecast (menggunakan metrik)
+
+
